@@ -1,10 +1,10 @@
-
+import Navbar from './navbar.jsx'
 function App() {
  
 
   return (
     <>
-    <div></div>
+    <Navbar />
     </>
   )
 }
