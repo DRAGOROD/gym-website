@@ -7,9 +7,9 @@ const Navbar = () => {
         <img src={GymRatLogo} id="logo" alt="Gym Rat Logo" />
         <ul id="nav-links">
             <li>Home</li>
-            <li>About</li>
             <li>Calculator</li>
             <li>Exercises</li>
+            <li>About</li>
             <li>Plan</li>
             <li>Reviews</li>
             <li>Contact</li>

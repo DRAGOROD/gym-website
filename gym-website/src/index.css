@@ -28,12 +28,33 @@ height: 10%;
     display: flex;
     gap: 2rem;
     margin-top:3rem;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight:bolder;
+    font-size:larger;
+}
+
+#nav-links li:hover{
+    color:aqua;
+    cursor: pointer;
 }
 
 #login-btn{
-   margin-top:3rem;
+   margin-top:2rem;
+   margin-bottom:4rem;
    margin-right: 4rem; 
+   padding: 0.7rem;
+   background-color: white;
+   font-family:Arial, Helvetica, sans-serif;
+   color: rgb(2, 2, 165);
+   font-weight: bolder;
+   border-radius: 0.4rem;
 }
 
-                              /*Navbar Endting*/
+#login-btn:hover{
+   background-image: linear-gradient(rgb(169, 169, 172), rgb(40, 41, 41));
+   cursor: pointer;
+   color:aqua;
+   transition:0.2s;
+}
+                              /*Navbar Ending*/
 
