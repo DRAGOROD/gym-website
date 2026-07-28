@@ -2,7 +2,7 @@
 import react from 'react';
 import GymRatLogo from './assets/gymratlogo.png';
 import HeroSection from './Hero.jsx';
-
+import Calculator from './calculator.jsx';
 const Navbar = () => {
   return (
     <>
@@ -20,6 +20,7 @@ const Navbar = () => {
         <div id="login-btn">Join Us</div>
     </div>
 <HeroSection/>
+<Calculator/>
     </>
   );
 };

@@ -13,7 +13,9 @@ let heroPics=[Hero1, Hero2, Hero3, Hero4, Hero5, Hero6];
   return (
     <>
     <div id="hero-container">
-    {heroPics.map((pic, index) => <img src={pic} alt="Hero Pictures" key={index} className="hero-pic" />)}
+      <div id="hero-wrapper">
+      {heroPics.map((pic, index) => <img src={pic} alt="Hero Pictures" key={index} className="hero-pic" />)}
+      </div>
     </div>
     </>
   )
