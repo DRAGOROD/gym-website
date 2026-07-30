@@ -3,7 +3,12 @@ import react from 'react';
 import GymRatLogo from './assets/gymratlogo.png';
 import HeroSection from './Hero.jsx';
 import Calculator from './calculator.jsx';
+import Reviews from './reviews.jsx'
+import Plan from './plan.jsx'
+
 const Navbar = () => {
+
+
   return (
     <>
     <div id="nav-container">
@@ -12,7 +17,6 @@ const Navbar = () => {
             <li>Home</li>
             <li>Calculator</li>
             <li>Exercises</li>
-            <li>About</li>
             <li>Plan</li>
             <li>Reviews</li>
             <li>Contact</li>
@@ -21,6 +25,8 @@ const Navbar = () => {
     </div>
 <HeroSection/>
 <Calculator/>
+<Reviews/>
+<Plan/>
     </>
   );
 };

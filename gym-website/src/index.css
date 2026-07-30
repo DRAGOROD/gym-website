@@ -296,3 +296,127 @@ z-index:-1;
 
 
                             /*Calculator Ending*/
+
+
+                            /*Reviews Starting*/
+
+
+#review-head{
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#upper-text{
+    margin-bottom: -7rem;
+    z-index:0;
+}
+
+#lower-text{
+    margin-top:-5rem
+}
+
+
+#review-head span{
+    background-image: linear-gradient(to right,rgb(209, 209, 5),rgb(230, 227, 227));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color:transparent;
+    font-size: 4rem;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: bolder;
+
+}
+
+#review-head img{
+    width:30%;
+}
+
+
+
+/*review cards*/
+#review-container{
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:2rem;
+}   
+
+
+.card{
+    background-color: rgb(59, 59, 59);
+    text-align: center;
+    width:30%;
+    border-radius: 1rem;
+    box-shadow: 1px 1px 3px 2px rgb(165, 164, 164);
+}
+
+.card:hover{
+cursor: text;
+box-shadow: 1px 1px 3px 4px rgb(165, 164, 164);
+}
+
+.card img{
+    padding:0.5rem;
+    background-image:linear-gradient(to right, rgb(145, 124, 5), rgb(226, 226, 87),rgb(197, 168, 3));
+    border-radius: 50%;
+}
+
+.card h5, .card p{
+    background-color: transparent;  
+}
+
+.card h5{
+    color:white;
+    font-size: larger;
+    font-weight: bolder;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.card p{
+    color:rgb(206, 205, 205);
+    font-weight: 800;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+                            /*Reviews Ending*/
+
+
+                            /*Plan Starting*/
+
+
+#plan-head{
+    margin-top: 3rem;
+    text-align: center;
+    color:white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}       
+
+#plan-head div{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    border: 2px solid white;
+    width:13%;
+  padding:0.2rem;
+  border-radius: 9999px;
+}
+
+
+#plan-head p{
+    font-size: 3rem;
+    font-weight: 800;
+    color:rgb(206, 203, 203);
+
+}
+
+
+
+
+
+
+                            /*Plan Ending*/
