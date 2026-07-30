@@ -131,7 +131,6 @@ height: 10%;
     width: 100%;
     box-shadow: 2px 0 0 0 #7e7c7c , -5px -5px 10px -5px #7e7c7c;
     text-align: center;
-    outline: 2px red solid;
 }
 
 #calculator-container hr{
@@ -196,9 +195,15 @@ opacity: 0;
    background-color:white;
 }
 
+input:hover, select:hover,button:hover{
+    cursor: pointer;
+}
+
+
 #calculator-box input{
     background-color: #0D1729;
     box-shadow: inset 1px 1px 3px 3px #081329;
+    color:white;
 }
 
 #calculator-box label{
@@ -240,8 +245,7 @@ z-index:-1;
     width:100%;
 }
 
-
-
+/*info display section*/
 
 #display-bmi{
     margin-top: 3rem;
@@ -256,8 +260,39 @@ z-index:-1;
 }
 
 
+#diet-cards{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap:3rem;
+}
 
+.card-infos{
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap:5px;
 
+}
+
+.card-infos div{
+    margin-left:5px;
+    margin-right:5px;
+    margin-top: 0.3rem;
+    display: flex;
+    justify-content: space-around;
+    gap:8px;
+}
+
+.card-infos div span,.card-infos div,.card-infos, h3{
+    background-color: transparent;
+}
+
+#left-card,#right-card{
+ background-color: rgb(32, 32, 32);
+ box-shadow:2px 2px 6px 5px rgb(61, 60, 60);
+ border-radius: 0.5rem;
+}
 
 
                             /*Calculator Ending*/
