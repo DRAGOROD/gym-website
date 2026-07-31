@@ -31,13 +31,15 @@ let planObj=[
     </div>
     <div id="plan-container">
       {planObj.map((v,i)=>(
-        <div className='plan-card'key={i}>
-            <h4>{v.Month}Month Membership</h4>
+        <div className='plan-card' key={i}>
+            <h4>{v.month} Month Membership</h4>
             <p><span>{v.cost}</span>/mo</p>
             <p>{v.f1}</p>
             <p>{v.f2}</p>
             <p>{v.f3}</p>
-            <div>Start 7 Days Free Trial</div>
+            <div>Charges every {v.month} month<br/>
+unless you cancel</div>
+            <div id="trial-btn">Start 7 Days Free Trial</div>
         </div>
       ))}
     </div>

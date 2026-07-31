@@ -5,6 +5,7 @@ import HeroSection from './Hero.jsx';
 import Calculator from './calculator.jsx';
 import Reviews from './reviews.jsx'
 import Plan from './plan.jsx'
+import Contact from './contact.jsx'
 
 const Navbar = () => {
 
@@ -27,6 +28,7 @@ const Navbar = () => {
 <Calculator/>
 <Reviews/>
 <Plan/>
+<Contact/>
     </>
   );
 };
