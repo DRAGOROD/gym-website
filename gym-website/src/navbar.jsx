@@ -6,6 +6,7 @@ import Calculator from './calculator.jsx';
 import Reviews from './reviews.jsx'
 import Plan from './plan.jsx'
 import Contact from './contact.jsx'
+import Footer from './footer.jsx'
 
 const Navbar = () => {
 
@@ -29,6 +30,7 @@ const Navbar = () => {
 <Reviews/>
 <Plan/>
 <Contact/>
+<Footer/>
     </>
   );
 };

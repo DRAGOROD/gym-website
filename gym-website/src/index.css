@@ -735,3 +735,50 @@ margin-left:2rem;
 
 
                            /*Contact Ending*/
+
+
+                           /*Footer Starting*/
+
+
+#footer-container{
+    margin-top:5rem;
+    color:white;
+    text-align:center;
+    display:flex;
+    width:100%;
+    justify-content:space-evenly;
+    background-image:linear-gradient(to right,#C8102E,#c24055,#C8102E,#c24055,#C8102E,#c24055,#C8102E);
+    padding-top:2rem;
+}    
+
+#footer-container div{
+    background:transparent;
+}
+
+#footer-container h3{
+  color:#bdb8b8;
+  margin-bottom:0.5rem;
+  background:transparent;
+}
+
+#footer-container p, #footer-container a{
+    color:white;
+    margin-bottom:0.5rem;
+    text-decoration:none;
+    background:transparent;
+}
+
+#footer-container p:hover,#footer-container a:hover{
+    cursor:pointer;
+    text-decoration:underline;
+}
+
+#copyright{
+    color:white;
+    background-color:rgb(4, 4, 82);
+    text-align:center;
+    padding:0.5rem;
+}
+
+
+                           /*Footer Ending*/
