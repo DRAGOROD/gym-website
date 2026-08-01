@@ -1,5 +1,8 @@
 import React from 'react'
 import { useState } from 'react';
+import FacebookIcon from './assets/facebookicon.webp'
+import InstaIcon from './assets/instagramicon.png'
+import TwitterIcon from './assets/twittericon.webp'
 
 const contact = () => {
 
@@ -22,7 +25,7 @@ let gymFaqs = [
   {
     id:'a4',
     question: "What facilities are included with my membership?",
-    answer: "Your membership includes access to modern strength and cardio equipment, free weights, functional training areas, locker rooms, changing rooms, and group fitness classes depending on your membership plan."
+    answer: "Your membership includes access to modern strength and cardio equipment, free weights, functional training areas, locker rooms, changing rooms, and group extra fitness depending on your plan."
   },
   {
     id:'a5',
@@ -31,6 +34,7 @@ let gymFaqs = [
   }
 ];
 
+let socialMediaLinks = [FacebookIcon,InstaIcon,TwitterIcon];
 
 
 let [openId,setOpenId]=useState(null)
@@ -40,6 +44,10 @@ function handleClick(id){
 }
 
   return (
+    <>
+    <div id="contact-heading-container">
+    <h3 id='contact-heading'>Contact Us</h3>
+    </div>
     <div id="contact-container">
         <div id="faq-section">
            {gymFaqs.map(v=>(
@@ -48,8 +56,11 @@ function handleClick(id){
                 {openId===v.id && (<p>{v.answer}</p>)}
             </div>
            ))}
-           <div id="social-media-icons">
-            
+           <h5>Connect With Us</h5>
+           <div className="sm-icons">
+            {socialMediaLinks.map((v,i)=>(
+              <span key={i}><img src={v} alt="Social Media Icons"/></span>
+            ))}
            </div>
         </div>
         <div id="contact-form">
@@ -77,6 +88,7 @@ function handleClick(id){
         </form>
         </div>
     </div>
+    </>
   )
 }
 
