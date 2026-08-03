@@ -1,5 +1,7 @@
 import React from 'react'
 import {useState} from 'react'
+
+/*Import TabPics */
 import ChestTab from './assets/chesttab.png'
 import BackTab from './assets/backtab.png'
 import AbsTab from './assets/abstab.png'
@@ -8,8 +10,64 @@ import ShoulderTab from './assets/shouldertab.png'
 import BicepTab from './assets/biceptab.png'
 import TricepTab from './assets/triceptab.png'
 
+/*Import Chest Ex */
+import BBP from './assets/bbp.png'
+import IDP from './assets/idp.png'
+import CF from './assets/cp.png'
+import PU from './assets/pu.png'
+import CCc from './assets/ccC.png'
+import DBP from './assets/dbp.png'
 
-const exercises = () => {
+/*Import Back Ex */
+import PUb from './assets/puB.png'
+import LP from './assets/lp.png'
+import BR from './assets/br.png'
+import SCR from './assets/scr.png'
+import DL from './assets/dl.png'
+import TBR from './assets/tbr.png'
+
+/*Import Shoulder Ex */
+import OP from './assets/op.png'
+import LR from './assets/lr.png'
+import FR from './assets/fr.png'
+import RPD from './assets/rpd.png'
+import AP from './assets/ap.png'
+import UR from './assets/ur.png'
+
+/*Import Bicep Ex */
+import BC from './assets/bc.png'
+import HC from './assets/hc.png'
+import PC from './assets/pc.png'
+import CCb from './assets/ccB.png'
+import CCb2 from './assets/ccB2.png'
+import IDC from './assets/idc.png'
+
+/*Import Tricep Ex */
+import TP from './assets/tp.png'
+import OTE from './assets/ote.png'
+import CGBP from './assets/cgbp.png'
+import SC from './assets/sc.png'
+import BD from './assets/bd.png'
+import CK from './assets/ck.png'
+
+/*Import Legs Ex */
+import BS from './assets/bs.png'
+import LPl from './assets/lpL.png'
+import RD from './assets/rd.png'
+import WL from './assets/wl.png'
+import LE from './assets/le.png'
+import HS from './assets/hs.png'
+
+/*Import Abs Ex */
+import C from './assets/c.png'
+import HLR from './assets/hlr.png'
+import CCa from './assets/ccA.png'
+import P from './assets/p.png'
+import RT from './assets/rt.png'
+import AWR from './assets/awr.png'
+
+
+const Exercises = () => {
 
 const workoutExercises = [
   {
@@ -19,27 +77,27 @@ const workoutExercises = [
     exercises: [
       {
         name: "Barbell Bench Press",
-        src: {}
+        src: BBP
       },
       {
         name: "Incline Dumbbell Press",
-        src: {}
+        src: IDP
       },
       {
         name: "Chest Fly",
-        src: {}
+        src: CF
       },
       {
         name: "Push-Up",
-        src: {}
+        src: PU
       },
       {
         name: "Cable Crossover",
-        src: {}
+        src: CCc 
       },
       {
         name: "Decline Bench Press",
-        src: {}
+        src: DBP
       }
     ]
   },
@@ -50,27 +108,27 @@ const workoutExercises = [
     exercises: [
       {
         name: "Pull-Up",
-        src: {}
+        src: PUb
       },
       {
         name: "Lat Pulldown",
-        src: {}
+        src: LP
       },
       {
         name: "Barbell Row",
-        src: {}
+        src: BR
       },
       {
         name: "Seated Cable Row",
-        src: {}
+        src: SCR
       },
       {
         name: "Deadlift",
-        src: {}
+        src: DL
       },
       {
         name: "T-Bar Row",
-        src: {}
+        src: TBR
       }
     ]
   },
@@ -81,27 +139,27 @@ const workoutExercises = [
     exercises: [
       {
         name: "Overhead Press",
-        src: {}
+        src: OP
       },
       {
         name: "Lateral Raise",
-        src: {}
+        src: LR
       },
       {
         name: "Front Raise",
-        src: {}
+        src: FR
       },
       {
         name: "Reverse Pec Deck",
-        src: {}
+        src: RPD
       },
       {
         name: "Arnold Press",
-        src: {}
+        src: AP
       },
       {
         name: "Upright Row",
-        src: {}
+        src: UR
       }
     ]
   },
@@ -112,27 +170,27 @@ const workoutExercises = [
     exercises: [
       {
         name: "Barbell Curl",
-        src: {}
+        src: BC
       },
       {
         name: "Hammer Curl",
-        src: {}
+        src: HC
       },
       {
         name: "Preacher Curl",
-        src: {}
+        src: PC
       },
       {
         name: "Concentration Curl",
-        src: {}
+        src: CCb
       },
       {
         name: "Cable Curl",
-        src: {}
+        src: CCb2
       },
       {
         name: "Incline Dumbbell Curl",
-        src: {}
+        src: IDC
       }
     ]
   },
@@ -143,27 +201,27 @@ const workoutExercises = [
     exercises: [
       {
         name: "Tricep Pushdown",
-        src: {}
+        src: TP
       },
       {
         name: "Overhead Tricep Extension",
-        src: {}
+        src: OTE
       },
       {
         name: "Close Grip Bench Press",
-        src: {}
+        src: CGBP
       },
       {
         name: "Skull Crusher",
-        src: {}
+        src: SC
       },
       {
         name: "Bench Dip",
-        src: {}
+        src: BD
       },
       {
         name: "Cable Kickback",
-        src: {}
+        src: CK
       }
     ]
   },
@@ -174,27 +232,27 @@ const workoutExercises = [
     exercises: [
       {
         name: "Barbell Squat",
-        src: {}
+        src: BS
       },
       {
         name: "Leg Press",
-        src: {}
+        src: LPl
       },
       {
         name: "Romanian Deadlift",
-        src: {}
+        src: RD
       },
       {
         name: "Walking Lunge",
-        src: {}
+        src: WL
       },
       {
         name: "Leg Extension",
-        src: {}
+        src: LE
       },
       {
         name: "Hack Squat",
-        src: {}
+        src: HS
       }
     ]
   },
@@ -205,27 +263,27 @@ const workoutExercises = [
     exercises: [
       {
         name: "Crunch",
-        src: {}
+        src: C
       },
       {
         name: "Hanging Leg Raise",
-        src: {}
+        src: HLR
       },
       {
         name: "Cable Crunch",
-        src: {}
+        src: CCa
       },
       {
         name: "Plank",
-        src: {}
+        src: P
       },
       {
         name: "Russian Twist",
-        src: {}
+        src: RT
       },
       {
         name: "Ab Wheel Rollout",
-        src: {}
+        src: AWR
       }
     ]
   }
@@ -240,13 +298,13 @@ let activeTab=workoutExercises.find(exercise=>exercise.id===activeId);
     <div id="exercise-heading">Exercises</div>
          <div id="exercise-container">
           <div id="exerciseIcon-container">
-           {workoutExercises.map(exercise=>(<img key={exercise.id} src={exercise.icon} alt={exercise.muscleGroup} onClick={()=>setActiveId(exercise.id)}/>))}
+           {workoutExercises.map(exercise=>(<img key={exercise.id} src={exercise.icon} alt={exercise.muscleGroup} onClick={()=>setActiveId(exercise.id)} style={activeId===exercise.id?{backgroundColor:"rgb(31, 68, 31)",borderRadius:"20%",boxShadow: "inset 3px 3px 14px 4px gray"}:{}}/>))}
           </div>
            <div id="workouts-container">
               {activeTab.exercises.map((v,i)=>(
-                <div key={i}>
+                <div key={i} className="workout-cards">
                 <h3>{v.name}</h3>
-                <img src={v.src} alt={v.name} width="250px"/>
+                <img src={v.src} alt={v.name}/>
                 </div>
               ))}
            </div>
@@ -255,4 +313,4 @@ let activeTab=workoutExercises.find(exercise=>exercise.id===activeId);
   )
 }
 
-export default exercises
+export default Exercises

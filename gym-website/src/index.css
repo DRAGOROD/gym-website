@@ -3,6 +3,7 @@ margin: 0;
 padding: 0;
 box-sizing: border-box;
 background-color: #080808;
+
 }
 
 
@@ -789,28 +790,81 @@ margin-left:2rem;
                            /*Exercise Starting*/
 
 
+#exercise-heading{
+    text-align: center;
+    color:white;
+    font-size: 3rem;
+    font-weight: bolder;
+    margin-top: 4rem;
+    margin-bottom: 2.5rem;
+}
+
+
 #exercise-container{
     width:100%;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
+    display: flex;
+    flex-direction: column;
     align-items:center;
-    outline:2px solid red;
+
 ;}   
 
 #exerciseIcon-container{
     display:flex;
     justify-content:center;
-    align-items:center;
     gap:1rem;
-    margin-top:1rem;
+    margin-top:2rem;
 }
 
-#exercise-container img{
-    width:5%;
-    height:5%;
-    outline:2px solid red;
+#exerciseIcon-container img{
+    width:10%;
+    height:10%;
     background:transparent;
+    transition: 0.3s ease;
+
+}
+
+#exerciseIcon-container img:hover{
+    cursor: pointer;
+    background-color: rgb(26, 39, 26);
+    border-radius: 20%;
+    box-shadow: inset 3px 3px 14px 4px gray;
+}
+
+
+
+/*workout section*/
+#workouts-container img{
+  width:100%;
+  object-fit: contain;
+  box-shadow: 2px 2px 12px 5px gray;
+}
+
+#workouts-container{
+    width:100%;
+    margin-top:4rem;
+    text-align:center;
+    display:flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap:2rem;
+
+}
+
+.workout-cards{
+    color:white;
+    width:30%;
+    transition: 0.4s ease;
+}
+
+.workout-cards h3{
+    margin-bottom: 1rem;
+}
+
+.workout-cards:hover{
+    color:aqua;
+    width:35%;
+    margin-bottom:2rem;
+    margin-top:-2rem;
 }
 
 
