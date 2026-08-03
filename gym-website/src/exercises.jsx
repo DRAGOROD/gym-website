@@ -66,6 +66,10 @@ import P from './assets/p.png'
 import RT from './assets/rt.png'
 import AWR from './assets/awr.png'
 
+/*Animated Hands */
+import RightHand from'./assets/righthand.png'
+import LeftHand from'./assets/lefthand.png'
+
 
 const Exercises = () => {
 
@@ -295,7 +299,11 @@ let activeTab=workoutExercises.find(exercise=>exercise.id===activeId);
 
   return (
     <>
+    <div id="exercise-head">
+      <img src={LeftHand} alt="exercise-hands" id="left-hand"/>
     <div id="exercise-heading">Exercises</div>
+      <img src={RightHand} alt="exercise-hands" id="right-hand"/>
+    </div>
          <div id="exercise-container">
           <div id="exerciseIcon-container">
            {workoutExercises.map(exercise=>(<img key={exercise.id} src={exercise.icon} alt={exercise.muscleGroup} onClick={()=>setActiveId(exercise.id)} style={activeId===exercise.id?{backgroundColor:"rgb(31, 68, 31)",borderRadius:"20%",boxShadow: "inset 3px 3px 14px 4px gray"}:{}}/>))}

@@ -789,7 +789,7 @@ margin-left:2rem;
 
                            /*Exercise Starting*/
 
-
+/*Exercise Head*/
 #exercise-heading{
     text-align: center;
     color:white;
@@ -799,7 +799,58 @@ margin-left:2rem;
     margin-bottom: 2.5rem;
 }
 
+#exercise-head{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+#exercise-head img{
+    width:8%;
+    height:8%;
+    background:transparent;
+}
+
+
+#left-hand{
+animation:left-flexer 7s infinite linear; 
+}
+
+@keyframes left-flexer{
+
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(-25deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+
+}
+
+#right-hand{
+animation:right-flexer 7s infinite linear; 
+}
+
+@keyframes right-flexer{
+
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(25deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+
+}
+
+
+
+/*Exercise Tabs*/
 #exercise-container{
     width:100%;
     display: flex;
@@ -866,7 +917,6 @@ margin-left:2rem;
     margin-bottom:2rem;
     margin-top:-2rem;
 }
-
 
 
                            /*Exercise Ending*/
