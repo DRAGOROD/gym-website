@@ -25,7 +25,7 @@ let gymFaqs = [
   {
     id:'a4',
     question: "What facilities are included with my membership?",
-    answer: "Your membership includes access to modern strength and cardio equipment, free weights, functional training areas, locker rooms, changing rooms, and group extra fitness depending on your plan."
+    answer: "Your membership includes access to modern strength and cardio equipment, free weights, functional training areas, locker rooms, changing rooms, and group exercise classes depending on your plan."
   },
   {
     id:'a5',

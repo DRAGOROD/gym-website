@@ -3,10 +3,11 @@ import react from 'react';
 import GymRatLogo from './assets/gymratlogo.png';
 import HeroSection from './Hero.jsx';
 import Calculator from './calculator.jsx';
-import Reviews from './reviews.jsx'
-import Plan from './plan.jsx'
-import Contact from './contact.jsx'
-import Footer from './footer.jsx'
+import Reviews from './reviews.jsx';
+import Plan from './plan.jsx';
+import Contact from './contact.jsx';
+import Footer from './footer.jsx';
+import Exercises from './exercises.jsx';
 
 const Navbar = () => {
 
@@ -30,6 +31,7 @@ const Navbar = () => {
 <Reviews/>
 <Plan/>
 <Contact/>
+<Exercises/>
 <Footer/>
     </>
   );
