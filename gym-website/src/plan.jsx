@@ -27,7 +27,7 @@ let planObj=[
   return (
     <>
     <div id="plan-head">
-    <div>Membership Plan</div>
+    <h3>Membership Plan</h3>
     <p>Crushing your health and fitness goals starts here...</p>
     </div>
     <div id="plan-container" style={{backgroundImage:`url(${PlanBg})`,backgroundSize:"cover",backgroundPosition:"center"}}>

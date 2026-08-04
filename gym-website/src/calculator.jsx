@@ -41,37 +41,37 @@ gender==="male"?((10*(weightUnit==="lbs"?weight/2.20462:weight))+(6.25*(heightUn
       <div id="calculator-box">
         <h1>BMI CALCULATOR</h1>
         <form>
-           <div><input type="number" required placeholder='Height' onChange={(e)=>setHeight(Number(e.target.value))}/><select onChange={(e)=>setHeightUnit(e.target.value)}>
+           <div><input className='calculator-animation' type="number" required placeholder='Height' onChange={(e)=>setHeight(Number(e.target.value))}/><select className='calculator-animation' onChange={(e)=>setHeightUnit(e.target.value)}>
                                                                                                         <option value="cm">CM</option>
                                                                                                         <option value="m">M</option>
                                                                                                      </select></div> 
-            <div><input type="number" required placeholder='Weight' onChange={(e)=>setWeight(Number(e.target.value))}/><select onChange={(e)=>setWeightUnit(e.target.value)} id="weight-unit">
+            <div><input  className='calculator-animation'type="number" required placeholder='Weight' onChange={(e)=>setWeight(Number(e.target.value))}/><select className='calculator-animation'  onChange={(e)=>setWeightUnit(e.target.value)} id="weight-unit">
                                                                                                         <option value="kg">KG</option>
                                                                                                         <option value="lbs">LBS</option>
                                                                                                       </select></div> 
-            <input type="number" required placeholder='Age.....' onChange={(e)=>setAge(e.target.value)}/>
+            <input  className='calculator-animation' type="number" required placeholder='Age.....' onChange={(e)=>setAge(e.target.value)}/>
             <label>Gender:
-               <select onChange={(e)=>setGender(e.target.value)}>
+               <select className='calculator-animation' onChange={(e)=>setGender(e.target.value)}>
                  <option value="male">Male</option>
                  <option value="female">Female</option>
                </select>
             </label>
             <label>Activity Level:
-            <select onChange={(e)=>setActivity(Number(e.target.value))}>
+            <select  className='calculator-animation' onChange={(e)=>setActivity(Number(e.target.value))}>
               <option value="1.2">No Activity(No Exercise)</option>
               <option value="1.375">Light Activity(1-3 Days/Week)</option>
               <option value="1.55">Modarate Activity(3-5Days/Week)</option>
               <option value="1.725">Very Activity(6-7 Days/Week)</option>
             </select>
             </label>
-            <button type='button' onClick={()=>{calculateBmi();calculateCalories();}}>Calculate BMI</button>
+            <button  className='calculator-animation' type='button' onClick={()=>{calculateBmi();calculateCalories();}}>Calculate BMI</button>
         </form>
         <div id="display-bmi" hidden={bmi === null}>
-        <div hidden={calories<10}>{bmi?bmi.toFixed(2):0}<span>Kg/M<sup>2</sup></span></div>
-        <div style={{color: bmi >= 40 ? "darkred" : bmi >= 35 ? "red" : bmi >= 30 ? "orange" : bmi >= 25 ? "yellow" : bmi >= 18.4 ? "green" : bmi>=16? "red": bmi>0?"darkred":"white"}}>
+        <div className='show-box' hidden={calories<10}>{bmi?bmi.toFixed(2):0}<span>Kg/M<sup>2</sup></span></div>
+        <div className='show-box' style={{color: bmi >= 40 ? "darkred" : bmi >= 35 ? "red" : bmi >= 30 ? "orange" : bmi >= 25 ? "yellow" : bmi >= 18.4 ? "green" : bmi>=16? "red": bmi>0?"darkred":"white"}}>
             ({bmi>=40?"Morbid Obesity":bmi>=35 && bmi<=39.9?"Obesity Class II":bmi>=30 && bmi<=34.9?"Obesity Class I":bmi>=25 && bmi<=29.9?"Overweight":bmi>=18.4 && bmi<=24.9?"Healthy Weight":bmi>=16.9 && bmi<18.4?"Mild Thinness":bmi>16?"Moderate Thinness":bmi>0?"Severe Thinness":"Enter Valid Input"})
         </div>
-        <div hidden={calories<10}>{calories<10?0:Math.round(calories)}<span>Kcal/Day</span></div>
+        <div className='show-box' hidden={calories<10}>{calories<10?0:Math.round(calories)}<span>Kcal/Day</span></div>
         <div id="diet-cards">
           <div id="left-card" hidden={calories<10}>
           <h3>To Lose Weight</h3>

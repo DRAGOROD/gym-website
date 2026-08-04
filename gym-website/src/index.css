@@ -3,9 +3,39 @@ margin: 0;
 padding: 0;
 box-sizing: border-box;
 background-color: #080808;
-
 }
 
+
+/*Border Color Changing Animation*/
+@keyframes border-colors{
+  0%{
+    border-color:white;
+  }
+  12.5%{
+    border-color:rgb(238, 20, 20)
+  }
+  25%{
+    border-color:rgb(250, 182, 193)
+  }
+  37.5%{
+    border-color:aqua
+  }
+  50%{
+    border-color:rgb(218, 76, 218);
+  }
+  62.5%{
+    border-color:aliceblue;
+  }
+  75%{
+   border-color:rgb(236, 236, 61);
+  }
+  87.5%{
+    border-color:rgb(230, 161, 34);
+  }
+  100%{
+   border-color:rgb(19, 247, 19);
+  }
+}
 
                             /*Navbar Starting*/
 
@@ -59,6 +89,44 @@ background: transparent;
    color:aqua;
    transition:0.2s;
 }
+
+
+/*Tab Content*/
+
+#content-container{
+transition: opacity 0.5s ease, transform 0.5s ease ;
+}
+
+.page-show{
+ animation:slide-in 0.5s linear;
+}
+
+.page-hide{
+ animation:slide-out 0.5s linear;
+}
+
+@keyframes slide-in{
+    from{
+        opacity: 0;
+        transform: translateX(40%);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-out{
+    from{
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to{
+        opacity: 0;
+        transform: translateX(-40%);
+    }
+}
+
 
                               /*Navbar Ending*/
 
@@ -146,10 +214,12 @@ opacity: 0;
     margin: auto;
     height:27rem;
     border-radius: 0.4rem;
+    border:3px solid white;
     margin-top: 3rem;
-    margin-bottom: 1rem;
-    box-shadow: 1.5px 1.5px 15px 4px white, -1.5px -1.5px 15px 4px;
+    margin-bottom: 25rem;
     padding:1rem;
+    animation:border-colors infinite 10s;
+    /*box-shadow: 1.5px 1.5px 15px 4px white, -1.5px -1.5px 15px 4px;*/
     /*position:relative;
    z-index:0;*/
 }
@@ -258,12 +328,19 @@ z-index:-1;
     margin-top: 3rem;
     color:white;
     font-size:xx-large;
+    background: transparent;
+    text-align: center;
+}
+
+.show-box{
+background-color: #0808088c;
 }
 
 #display-bmi span{
     font-size:large;
     color:rgb(243, 132, 5);
     margin-left:3px;
+  background: transparent;
 }
 
 
@@ -272,6 +349,7 @@ z-index:-1;
     display: flex;
     justify-content: center;
     gap:3rem;
+   background: transparent;
 }
 
 .card-infos{
@@ -279,7 +357,6 @@ z-index:-1;
     display: flex;
     flex-direction: column;
     gap:5px;
-
 }
 
 .card-infos div{
@@ -289,16 +366,42 @@ z-index:-1;
     display: flex;
     justify-content: space-around;
     gap:8px;
+
 }
 
-.card-infos div span,.card-infos div,.card-infos, h3{
-    background-color: transparent;
+.card-infos div span,.card-infos div,.card-infos, h3,sup{
+background: transparent;
 }
 
 #left-card,#right-card{
- background-color: rgb(32, 32, 32);
- box-shadow:2px 2px 6px 5px rgb(61, 60, 60);
+ box-shadow:1px 1px 9px 3px white;
  border-radius: 0.5rem;
+ background-color: #08080871;
+ padding:1rem;
+ /*effect*/
+ scale:1;
+ transition: all 1s ease;
+@starting-style{
+ scale:0;
+}
+}
+
+/*Calculator Page Entry Animation*/
+.calculator-animation{
+   animation:appear linear;
+   animation-timeline: view();
+   animation-range: entry 0 cover 30%;
+}
+
+@keyframes appear{
+    from{
+        scale:0;
+        transform:translateY(100%);
+    }
+    to{
+        scale:1;
+        transform:translateY(0);
+    }
 }
 
 
@@ -356,22 +459,33 @@ z-index:-1;
 
 
 .card{
-    background-color: rgb(59, 59, 59);
+    background:transparent;
+    backdrop-filter: blur(8px);
     text-align: center;
     width:30%;
     border-radius: 1rem;
     box-shadow: 1px 1px 3px 2px rgb(165, 164, 164);
+    /*effect*/
+    transform: translateY(0);
+    opacity: 1;
+    transition: all 2s ease-in-out;
+    @starting-style{
+        transform: translateY(100%);
+        opacity: 0.7;
+    }
 }
 
 .card:hover{
+transition: 0.4 ease;
 cursor: text;
 box-shadow: 1px 1px 3px 4px rgb(165, 164, 164);
 }
 
 .card img{
-    padding:0.5rem;
     background-image:linear-gradient(to right, rgb(145, 124, 5), rgb(226, 226, 87),rgb(197, 168, 3));
     border-radius: 50%;
+    border:0.3rem solid white;
+    animation:infinite border-colors 10s;
 }
 
 .card h5, .card p{
@@ -407,13 +521,16 @@ box-shadow: 1px 1px 3px 4px rgb(165, 164, 164);
     align-items: center;
 }       
 
-#plan-head div{
+#plan-head h3{
+    font-size: xx-large;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
     border: 2px solid white;
-    width:13%;
-  padding:0.2rem;
-  border-radius: 9999px;
+    width:24%;
+    padding:0.2rem;
+    border-radius: 9999px;
+    margin-bottom: 2rem;
+    animation: border-colors 15s linear infinite;
 }
 
 
@@ -421,7 +538,15 @@ box-shadow: 1px 1px 3px 4px rgb(165, 164, 164);
     font-size: 3rem;
     font-weight: 800;
     color:rgb(206, 203, 203);
-
+    margin-bottom: 2rem;
+    /*effect*/
+    transform: translateX(0);
+    scale:1;
+    transition: all 2s ease;
+    @starting-style{
+        transform: translateX(-100%);
+        scale:0.6;
+    }
 }
 
 /*membership cards*/
@@ -442,13 +567,21 @@ box-shadow: 1px 1px 3px 4px rgb(165, 164, 164);
     gap:0.7rem;
     border-radius: 1rem;
     box-shadow: 2px 2px 12px 3px rgb(196, 186, 174);
-    transition: 0.4s ease;
+    /*effect*/
+    opacity:1;
+    transform: translateY(0);
+    transition: all 3s ease;
+    @starting-style{
+        opacity: 0.3;
+        transform: translateY(100%);
+    }
 }
 
 .plan-card:hover{
+    transition: 0.3s ease;
     margin-top: -2rem;
     margin-bottom: 2rem;
-box-shadow: 2px 2px 12px 1px rgb(196, 186, 174);
+    box-shadow: 2px 2px 12px 1px rgb(196, 186, 174);
 }
 
 .plan-card h4, .plan-card p, .plan-card div, .plan-card span{
@@ -514,23 +647,34 @@ box-shadow: 2px 2px 12px 1px rgb(196, 186, 174);
     text-align:center;
     display:flex;
     justify-content:center;
+    margin-top: 2.5rem;
 }                          
 
 #contact-heading{
+    font-size: xx-large;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
     color:rgb(212, 209, 209);
     border: 2px solid white;
-    width:14%;
+    width:17%;
     padding:0.2rem;
     border-radius: 9999px;
+    margin-top: 2rem;
     margin-bottom:3rem;
+    animation: border-colors 15s linear infinite;
 }
 
 
 /*FAQ Section*/
 #faq-section div button, #faq-section div button span, #faq-section div p{
     background-color: white;
+    opacity: 1;
+    transform:translateX(0);
+    transition: all 2s ease;
+    @starting-style{
+        opacity:0;
+        transform:translateX(100%)
+    }
 }
 
 #faq-section{
@@ -588,7 +732,6 @@ box-shadow: 2px 2px 12px 1px rgb(196, 186, 174);
     margin-top:3rem;
     background: transparent;
     backdrop-filter: blur(12px);
-
 }
 
 .sm-icons img{
@@ -668,6 +811,13 @@ background: transparent;
     border-radius: 1rem;
     background:transparent;
     backdrop-filter: blur(8px);
+    /*effect*/
+
+    transform: translateY(0);
+    transition: all 2s ease;
+    @starting-style{
+        transform: translateY(100%);
+    }
     /*border:2px solid rgba(255,255,255,5);
     backdrop-filter: blur(15px);*/
 }
@@ -679,6 +829,16 @@ background: transparent;
     height:2rem;
     width: 70%;
     margin-bottom: 2rem;
+    /*effect*/
+    opacity: 1;
+    scale:1;
+    transform: translateY(0);
+    transition: all 2s ease;
+    @starting-style{
+        opacity: 0;
+        scale:0;
+        transform: translateY(100%);
+    }
 }
 
 #contact-form form div input{
@@ -717,6 +877,16 @@ background: transparent;
     margin-top: 1rem;
     width:70%;
     height:3rem;
+    /*effect*/
+    opacity: 1;
+    scale:1;
+    transform: translateY(0);
+    transition: all 2s ease;
+    @starting-style{
+        opacity: 0;
+        scale:0;
+        transform: translateY(100%);
+    }
 }
 
 #contact-form select option{
@@ -731,7 +901,6 @@ background: transparent;
 
 #contact-form button{
     margin-top: 2rem;
-    
     padding:0.7rem;
     color:white;
     font-weight: bolder;
@@ -739,15 +908,59 @@ background: transparent;
     border-radius: 1rem;
     border: none;
     margin-bottom: 1rem;
-    
     background-image: linear-gradient(50deg, rgb(4, 77, 4),rgb(6, 190, 6),rgb(4, 77, 4),rgb(6, 190, 6),rgb(4, 77, 4),rgb(6, 190, 6),rgb(4, 77, 4));
     transition: 0.3s ease;
     box-shadow: 1px 1px 12px 1px green;
+    /*effect*/
+    opacity: 1;
+    scale:1;
+    transform: translateY(0);
+    transition: all 2s ease;
+    @starting-style{
+        opacity: 0;
+        scale:0;
+        transform: translateY(100%);
+    }
 }
 
 #contact-form button:hover{
     box-shadow: 2px 2px 12px 4px green;
     background-image: linear-gradient(50deg, rgb(4, 77, 4),rgb(6, 190, 6),rgb(4, 77, 4));
+}
+
+/*Social Media icon Scroll Animation Animation*/
+/*heading animation*/
+.sih-animation{
+    animation: fading-in linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 30%;
+}
+@keyframes fading-in{
+    from{
+        opacity: 0;
+        scale:0.6;
+        transform: translateX(-40%);
+    }
+    to{
+        opacity: 1;
+        scale:1;
+        transform:translateX(0);
+    }
+}
+
+/*buttons animation*/
+.si-animation{
+    animation:poping-up linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 30%;
+}
+@keyframes poping-up{
+    from{
+        scale:0;
+    }
+    to{
+        scale:100%;
+    }
 }
 
 
@@ -758,7 +971,7 @@ background: transparent;
 
 
 #footer-container{
-    margin-top:5rem;
+    margin-top:2rem;
     color:white;
     text-align:center;
     display:flex;
@@ -819,6 +1032,7 @@ background: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 1rem;
 }
 
 #exercise-head img{
@@ -881,17 +1095,24 @@ animation:right-flexer 7s infinite linear;
     gap:1rem;
     margin-top:2rem;
     background: transparent;
+        /*effect*/
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 3s ease;
+    @starting-style{
+    opacity:0.7;
+    transform: translateX(-100%);
+    }
 }
 
 #exerciseIcon-container img{
     width:10%;
     height:10%;
     background:transparent;
-    transition: 0.3s ease;
-
 }
 
 #exerciseIcon-container img:hover{
+    transition: 0.3s ease;
     cursor: pointer;
     background-color: rgb(26, 39, 26);
     border-radius: 20%;

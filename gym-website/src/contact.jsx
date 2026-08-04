@@ -57,10 +57,10 @@ function handleClick(id){
                 {openId===v.id && (<p>{v.answer}</p>)}
             </div>
            ))}
-           <h5>Connect With Us</h5>
+           <h5 className='sih-animation'>Connect With Us</h5>
            <div className="sm-icons">
             {socialMediaLinks.map((v,i)=>(
-              <span key={i}><img src={v} alt="Social Media Icons"/></span>
+              <span key={i} className='si-animation'><img src={v} alt="Social Media Icons"/></span>
             ))}
            </div>
         </div>
