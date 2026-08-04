@@ -70,6 +70,8 @@ import AWR from './assets/awr.png'
 import RightHand from'./assets/righthand.png'
 import LeftHand from'./assets/lefthand.png'
 
+/*BackGround*/
+import ExBg from './assets/calculator-background2.png'
 
 const Exercises = () => {
 
@@ -304,7 +306,7 @@ let activeTab=workoutExercises.find(exercise=>exercise.id===activeId);
     <div id="exercise-heading">Exercises</div>
       <img src={RightHand} alt="exercise-hands" id="right-hand"/>
     </div>
-         <div id="exercise-container">
+         <div id="exercise-container" style={{backgroundImage:`url(${ExBg})`,backgroundSize:"cover",backgroundPosition:"center"}}>
           <div id="exerciseIcon-container">
            {workoutExercises.map(exercise=>(<img key={exercise.id} src={exercise.icon} alt={exercise.muscleGroup} onClick={()=>setActiveId(exercise.id)} style={activeId===exercise.id?{backgroundColor:"rgb(31, 68, 31)",borderRadius:"20%",boxShadow: "inset 3px 3px 14px 4px gray"}:{}}/>))}
           </div>

@@ -1,4 +1,5 @@
 import React from 'react'
+import PlanBg from './assets/planbg.png'
 
 const plan = () => {
 
@@ -29,7 +30,7 @@ let planObj=[
     <div>Membership Plan</div>
     <p>Crushing your health and fitness goals starts here...</p>
     </div>
-    <div id="plan-container">
+    <div id="plan-container" style={{backgroundImage:`url(${PlanBg})`,backgroundSize:"cover",backgroundPosition:"center"}}>
       {planObj.map((v,i)=>(
         <div className='plan-card' key={i}>
             <h4>{v.month} Month Membership</h4>

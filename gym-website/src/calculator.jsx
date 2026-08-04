@@ -1,5 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
+import CalculatorBG from './assets/calculator-background3.png'
+
 const calculator = () => {
 
 let [bmi,setBmi]=useState(null);
@@ -34,7 +36,7 @@ gender==="male"?((10*(weightUnit==="lbs"?weight/2.20462:weight))+(6.25*(heightUn
 {/*(calories<10? because even after leaving the input empty the calculation coming as 6)*/}
 
   return (
-    <div id="calculator-container">
+    <div id="calculator-container" style={{backgroundImage:`url(${CalculatorBG})`,backgroundSize:"cover",backgroundPosition:"center"}}>
       <hr/>
       <div id="calculator-box">
         <h1>BMI CALCULATOR</h1>

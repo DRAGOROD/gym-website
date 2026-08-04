@@ -3,6 +3,7 @@ import { useState } from 'react';
 import FacebookIcon from './assets/facebookicon.webp'
 import InstaIcon from './assets/instagramicon.png'
 import TwitterIcon from './assets/twittericon.webp'
+import ContactBg from './assets/contactbg.png'
 
 const contact = () => {
 
@@ -48,7 +49,7 @@ function handleClick(id){
     <div id="contact-heading-container">
     <h3 id='contact-heading'>Contact Us</h3>
     </div>
-    <div id="contact-container">
+    <div id="contact-container" style={{backgroundImage:`url(${ContactBg})`,backgroundSize:"cover",backgroundPosition:"center"}}>
         <div id="faq-section">
            {gymFaqs.map(v=>(
             <div  key={v.id}>

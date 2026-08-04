@@ -1,5 +1,6 @@
 import React from 'react'
 import BarbalePic from './assets/barbale.webp'
+import ReviewBg from './assets/reviewbg.png'
 
 const reviews = () => {
 
@@ -103,7 +104,7 @@ let clientReviews = [
         <img src={BarbalePic}/>
         <span id="lower-text">REVIEW</span>
       </div>
-    <div id="review-container">
+    <div id="review-container" style={{backgroundImage:`url(${ReviewBg})`,backgroundSize:"cover",backgroundPosition:"center"}}>
      {clientReviews.map((v,i)=>(
         <div className="card" key={i}>
             <img src={v.image}/>
