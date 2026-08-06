@@ -741,15 +741,8 @@ box-shadow: 1px 1px 3px 4px rgb(165, 164, 164);
 
 
 /*FAQ Section*/
-#faq-section div button, #faq-section div button span, #faq-section div p{
+#faq-section div button, #faq-section div button span{
     background-color: white;
-    opacity: 1;
-    transform:translateX(0);
-    transition: all 2s ease;
-    @starting-style{
-        opacity:0;
-        transform:translateX(100%)
-    }
 }
 
 #faq-section{
@@ -768,6 +761,13 @@ box-shadow: 1px 1px 3px 4px rgb(165, 164, 164);
     width:100%;
     margin-left: 2rem;
     background: transparent;
+        opacity: 1;
+    transform:translateX(0);
+    transition: all 2s ease;
+    @starting-style{
+        opacity:0;
+        transform:translateX(100%)
+    }
 }
 
 #faq-section div button{
@@ -782,6 +782,7 @@ box-shadow: 1px 1px 3px 4px rgb(165, 164, 164);
 
 #faq-section div button:hover{
     background-color: #d3d2d2;
+    transition: 0.2s;
 }
 
 #faq-section div p{
