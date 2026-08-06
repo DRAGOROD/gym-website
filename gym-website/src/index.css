@@ -44,7 +44,9 @@ background-color: #080808;
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     text-decoration: none;
+    
     color: white;
     box-shadow: 2px 2px 10px 2px #7e7c7c , -5px -5px 10px -5px #7e7c7c;
 }
@@ -59,21 +61,51 @@ background: transparent;
     list-style: none;
     display: flex;
     gap: 2rem;
-    margin-top:3rem;
+    align-items: center;
+    justify-content: center;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight:bolder;
     font-size:larger;
+    height:3rem;
+    width:48%;
+    background-color: rgb(20, 20, 20);
+    box-shadow: inset 1.5px 1.5px 8px 3px rgb(8, 0, 0);
+    border-radius: 1rem;
 }
 
+#nav-links li{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding:0.3rem;
+    border-radius: 1rem;
+    width:5.5rem;
+    background-color: transparent;
+}
+
+.active-tab{
+   color:aqua;
+   width:5.5rem;
+   padding:0.5rem;
+   border-radius: 1rem;
+   background-image: linear-gradient(180deg,#6d065a,#ff00ff,#ff00ff,#6d065a);
+   box-shadow: 1px 1px 2px 2px rgb(39, 39, 39);
+}
 
 #nav-links li:hover{
+    transition: 0.3s;
+    width:5.5rem;
     color:aqua;
     cursor: pointer;
+    padding:0.3rem;
+    border-radius: 1rem;
+    background-color: #570448;
 }
 
 #login-btn{
-   margin-top:2rem;
-   margin-bottom:4rem;
+   margin-top:3rem;
+   margin-bottom:3rem;
    margin-right: 4rem; 
    padding: 0.7rem;
    background-color: white;
@@ -91,7 +123,7 @@ background: transparent;
 }
 
 
-/*Tab Content*/
+/*Tab Content transition Animation*/
 
 #content-container{
 transition: opacity 0.5s ease, transform 0.5s ease ;
@@ -127,6 +159,47 @@ transition: opacity 0.5s ease, transform 0.5s ease ;
     }
 }
 
+/*Floating Calculator Button*/
+#calculator-btn{
+    position: absolute;
+    background-color: red;
+    padding:0.5rem;
+    text-align: center;
+    border-radius: 1rem;
+    top:15%;
+    left:28.4%;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight:bolder;
+    font-size:larger;
+    clip-path: polygon(
+    0% 20%,
+    0% 100%,
+    100% 100%,
+    100% 20%,
+    92% 12%,
+    60% 12%,
+    50% 0%, 
+    40% 12%,
+    8% 12%
+);
+    background-color: rgb(3, 3, 133);
+    /*effect*/
+opacity:1;
+transform: translateY(0);
+transition: all 2s ease;
+@starting-style{
+opacity: 0.3;
+transform: translateY(-100%);
+}
+}
+
+#calculator-btn:hover{
+    transition: 0.3s;
+    color:aqua;
+    cursor: pointer;
+    background-color: #570448;
+}
+
 
                               /*Navbar Ending*/
 
@@ -135,6 +208,7 @@ transition: opacity 0.5s ease, transform 0.5s ease ;
                               /*Hero Starting*/
 #hero-container{
     width: 100%;
+    margin:auto;
     margin-top: 1rem;
     display:flex;
     overflow: hidden;
@@ -142,8 +216,9 @@ transition: opacity 0.5s ease, transform 0.5s ease ;
 
 #hero-wrapper{
     display:flex;
-    width: 100%;
+    width:100%;
     animation:hero-slide 36s linear infinite;
+     outline:red solid 2px;
 }
 
 @keyframes hero-slide{
@@ -1163,3 +1238,118 @@ animation:right-flexer 7s infinite linear;
 
 
                            /*Exercise Ending*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------------------------------RESPONSIVE DESIGN START-------------------------------------*/
+
+
+
+

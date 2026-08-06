@@ -1,5 +1,5 @@
 
-import react, { useState } from 'react';
+import react, { createContext, useRef, useState } from 'react';
 import GymRatLogo from './assets/gymratlogo.png';
 import Home from './home.jsx';
 import Reviews from './reviews.jsx';
@@ -8,15 +8,14 @@ import Contact from './contact.jsx';
 import Footer from './footer.jsx';
 import Exercises from './exercises.jsx';
 
+/*exporting the navigation for Calculator*/
+export const navContext=createContext(null)
+
 const Navbar = () => {
 
 let tabs=[
     {id:"t1",
       label:"Home",
-      content:Home
-    },
-    {id:"t1",
-      label:"Calculator",
       content:Home
     },
     {id:"t2",
@@ -39,6 +38,7 @@ let tabs=[
 
   let [activeId,setActiveId]=useState(tabs[0].id);
   let [visible,setVisible]=useState(true);
+  let calRef=useRef(null);
 
 
   let activeTab=tabs.find(tab=>tab.id===activeId);
@@ -53,20 +53,22 @@ let tabs=[
     },300)
   }
 
-
   return (
     <>
+    <navContext.Provider value={calRef}>
     <div id="nav-container">
         <img src={GymRatLogo} id="logo" alt="Gym Rat Logo" />
         <ul id="nav-links">
-            {tabs.map((tab,i)=>(<li key={i} onClick={()=>changeTab(tab.id)}>{tab.label}</li>))}
+          {tabs.map((tab,i)=>(<li className={activeId===tab.id?'active-tab':""} key={i} onClick={()=>changeTab(tab.id)}>{tab.label}</li>))}
         </ul>
+        <span id="calculator-btn" hidden={activeId!=="t1"} onClick={()=>calRef.current.scrollIntoView({behavior:"smooth"})}>Calculator</span>
         <div id="login-btn">Join Us</div>
     </div>
     {activeTab && 
     <div id="content-container" className={visible?"page-show":"page-hide"}>
     <activeTab.content/>
     </div>}
+    </navContext.Provider>
 <Footer/>
     </>
   );
