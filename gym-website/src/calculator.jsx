@@ -82,9 +82,9 @@ gender==="male"?((10*(weightUnit==="lbs"?weight/2.20462:weight))+(6.25*(heightUn
               <span style={{color:'red'}}>Aggressive:<span style={{color:'white'}}>{calories<10?0:Math.round(calories-800)}Kcal</span></span>
             </div>
             <div>
-              <span style={{color:'orangered'}}>Protine:<span style={{color:'white'}}>{calories<10?0:Math.round(weight*1.2)}g</span></span>
-              <span style={{color:'orangered'}}>Protine:<span style={{color:'white'}}>{calories<10?0:Math.round(weight*1.2)}g</span></span>
-              <span style={{color:'orangered'}}>Protine:<span style={{color:'white'}}>{calories<10?0:Math.round(weight*1.2)}g</span></span>
+              <span style={{color:'orangered'}}>Protine:<span style={{color:'white'}}>{calories<10?0:Math.round(((calories-300)*0.25)/4)}g</span></span>
+              <span style={{color:'orangered'}}>Protine:<span style={{color:'white'}}>{calories<10?0:Math.round(((calories-500)*0.25)/4)}g</span></span>
+              <span style={{color:'orangered'}}>Protine:<span style={{color:'white'}}>{calories<10?0:Math.round(((calories-800)*0.25)/4)}g</span></span>
             </div>
             <div>
               <span style={{color:'orangered'}}>Fat:<span style={{color:'white'}}>{Math.round(((calories<10?0:(calories-300))*0.25)/9)}g</span></span>
@@ -107,9 +107,9 @@ gender==="male"?((10*(weightUnit==="lbs"?weight/2.20462:weight))+(6.25*(heightUn
               <span style={{color:'red'}}>Aggressive:<span style={{color:'white'}}>{calories<10?0:Math.round(calories+800)}Kcal</span></span>
             </div>
             <div>
-              <span style={{color:'orangered'}}>Protine:<span style={{color:'white'}}>{calories<10?0:Math.round(weight*1.2)}g</span></span>
-              <span style={{color:'orangered'}}>Protine:<span style={{color:'white'}}>{calories<10?0:Math.round(weight*1.2)}g</span></span>
-              <span style={{color:'orangered'}}>Protine:<span style={{color:'white'}}>{calories<10?0:Math.round(weight*1.2)}g</span></span>
+              <span style={{color:'orangered'}}>Protine:<span style={{color:'white'}}>{calories<10?0:Math.round(((calories+300)*0.25)/4)}g</span></span>
+              <span style={{color:'orangered'}}>Protine:<span style={{color:'white'}}>{calories<10?0:Math.round(((calories+500)*0.25)/4)}g</span></span>
+              <span style={{color:'orangered'}}>Protine:<span style={{color:'white'}}>{calories<10?0:Math.round(((calories+800)*0.25)/4)}g</span></span>
             </div>
             <div>
               <span style={{color:'orangered'}}>Fat:<span style={{color:'white'}}>{Math.round(((calories<10?0:(calories+300))*0.25)/9)}g</span></span>
