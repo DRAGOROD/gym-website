@@ -1,6 +1,6 @@
 
 import react, { createContext, useRef, useState } from 'react';
-import GymRatLogo from './assets/gymratlogo.png';
+import GymRatLogo from './assets/gymratlogo.webp';
 import Home from './home.jsx';
 import Reviews from './reviews.jsx';
 import Plan from './plan.jsx';

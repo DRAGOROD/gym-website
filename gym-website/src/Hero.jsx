@@ -1,10 +1,10 @@
 import React from 'react'
-import Hero1 from './assets/hero1.png'
-import Hero2 from './assets/hero2.png'
-import Hero3 from './assets/hero3.png'
-import Hero4 from './assets/hero4.png'
-import Hero5 from './assets/hero5.png'
-import Hero6 from './assets/hero6.png'
+import Hero1 from './assets/hero1.webp'
+import Hero2 from './assets/hero2.webp'
+import Hero3 from './assets/hero3.webp'
+import Hero4 from './assets/hero4.webp'
+import Hero5 from './assets/hero5.webp'
+import Hero6 from './assets/hero6.webp'
 
 const Hero = () => {
 

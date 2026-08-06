@@ -1,9 +1,9 @@
 import React from 'react'
 import { useState } from 'react';
-import FacebookIcon from './assets/facebookicon.webp'
-import InstaIcon from './assets/instagramicon.png'
+import FacebookIcon from './assets/feacebookicon.webp'
+import InstaIcon from './assets/instagramicon.webp'
 import TwitterIcon from './assets/twittericon.webp'
-import ContactBg from './assets/contactbg.png'
+import ContactBg from './assets/contactbg.webp'
 
 const contact = () => {
 

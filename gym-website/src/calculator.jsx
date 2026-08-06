@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
-import CalculatorBG from './assets/calculator-background3.png'
+import CalculatorBG from './assets/calculator-background3.webp'
 
 const calculator = () => {
 

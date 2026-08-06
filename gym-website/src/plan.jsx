@@ -1,5 +1,5 @@
 import React from 'react'
-import PlanBg from './assets/planbg.png'
+import PlanBg from './assets/planbg.webp'
 
 const plan = () => {
 

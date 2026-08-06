@@ -1,6 +1,6 @@
 import React from 'react'
 import BarbalePic from './assets/barbale.webp'
-import ReviewBg from './assets/reviewbg.png'
+import ReviewBg from './assets/reviewbg.webp'
 
 const reviews = () => {
 
