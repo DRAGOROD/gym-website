@@ -31,6 +31,7 @@ let planObj=[
     <p>Crushing your health and fitness goals starts here...</p>
     </div>
     <div id="plan-container" style={{backgroundImage:`url(${PlanBg})`,backgroundSize:"cover",backgroundPosition:"center"}}>
+      <div id="card-container">
       {planObj.map((v,i)=>(
         <div className='plan-card' key={i}>
             <h4>{v.month} Month Membership</h4>
@@ -43,6 +44,7 @@ unless you cancel</div>
             <div id="trial-btn">Start 7 Days Free Trial</div>
         </div>
       ))}
+      </div>
     </div>
     </>
   )

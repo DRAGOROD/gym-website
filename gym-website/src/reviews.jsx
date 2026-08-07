@@ -105,6 +105,7 @@ let clientReviews = [
         <span id="lower-text">REVIEW</span>
       </div>
     <div id="review-container" style={{backgroundImage:`url(${ReviewBg})`,backgroundSize:"cover",backgroundPosition:"center"}}>
+      <div id='card-container'>
      {clientReviews.map((v,i)=>(
         <div className="card" key={i}>
             <img src={v.image}/>
@@ -113,6 +114,7 @@ let clientReviews = [
             <p>{v.ratings}</p>
         </div>
      ))}
+     </div>
      </div>
     </>
   )
