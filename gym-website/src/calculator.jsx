@@ -38,7 +38,7 @@ gender==="male"?((10*(weightUnit==="lbs"?weight/2.20462:weight))+(6.25*(heightUn
   return (
     <div id="calculator-container" style={{backgroundImage:`url(${CalculatorBG})`,backgroundSize:"cover",backgroundPosition:"center"}}>
       <hr/>
-      <div id="calculator-box">
+      <div id="calculator-box" className='calculator-animation' >
         <h1>BMI CALCULATOR</h1>
         <form>
            <div><input className='calculator-animation' type="number" required placeholder='Height' onChange={(e)=>setHeight(Number(e.target.value))}/><select className='calculator-animation' onChange={(e)=>setHeightUnit(e.target.value)}>
@@ -66,6 +66,7 @@ gender==="male"?((10*(weightUnit==="lbs"?weight/2.20462:weight))+(6.25*(heightUn
             </label>
             <button  className='calculator-animation' type='button' onClick={()=>{calculateBmi();calculateCalories();}}>Calculate BMI</button>
         </form>
+        </div>
         <div id="display-bmi" hidden={bmi === null}>
         <div className='show-box' hidden={calories<10}>{bmi?bmi.toFixed(2):0}<span>Kg/M<sup>2</sup></span></div>
         <div className='show-box' style={{color: bmi >= 40 ? "darkred" : bmi >= 35 ? "red" : bmi >= 30 ? "orange" : bmi >= 25 ? "yellow" : bmi >= 18.4 ? "green" : bmi>=16? "red": bmi>0?"darkred":"white"}}>
@@ -77,24 +78,23 @@ gender==="male"?((10*(weightUnit==="lbs"?weight/2.20462:weight))+(6.25*(heightUn
           <h3>To Lose Weight</h3>
            <div className="card-infos">
             <div>
-              <span style={{color:'green'}}>Slow:<span style={{color:'white'}}>{calories<10?0:Math.round(calories-300)}Kcal</span></span>
-              <span style={{color:'skyblue'}}>Modarate:<span style={{color:'white'}}>{calories<10?0:Math.round(calories-500)}Kcal</span></span>
-              <span style={{color:'red'}}>Aggressive:<span style={{color:'white'}}>{calories<10?0:Math.round(calories-800)}Kcal</span></span>
+              <span style={{color:'lightgreen'}}>Slow: <span style={{color:'white'}}>{calories<10?0:Math.round(calories-300)} Kcal/Day</span></span>
+              <span style={{color:'orangered'}}>Protine: <span style={{color:'white'}}>{calories<10?0:Math.round(((calories-300)*0.25)/4)} g</span></span>
+              <span style={{color:'orangered'}}>Fat: <span style={{color:'white'}}>{Math.round(((calories<10?0:(calories-300))*0.25)/9)} g</span></span>
+              <span style={{color:'orangered'}}>Carb: <span style={{color:'white'}}>{calories<10?0:Math.round(((calories-300)-((weight*1.2)*4)-(((calories-300)*0.25)/9)*9)/4)} g</span></span>
             </div>
             <div>
-              <span style={{color:'orangered'}}>Protine:<span style={{color:'white'}}>{calories<10?0:Math.round(((calories-300)*0.25)/4)}g</span></span>
-              <span style={{color:'orangered'}}>Protine:<span style={{color:'white'}}>{calories<10?0:Math.round(((calories-500)*0.25)/4)}g</span></span>
-              <span style={{color:'orangered'}}>Protine:<span style={{color:'white'}}>{calories<10?0:Math.round(((calories-800)*0.25)/4)}g</span></span>
+              <span style={{color:'skyblue'}}>Modarate: <span style={{color:'white'}}>{calories<10?0:Math.round(calories-500)} Kcal/Day</span></span>
+              <span style={{color:'orangered'}}>Protine: <span style={{color:'white'}}>{calories<10?0:Math.round(((calories-500)*0.25)/4)} g</span></span>
+              <span style={{color:'orangered'}}>Fat: <span style={{color:'white'}}>{Math.round(((calories<10?0:(calories-500))*0.25)/9)} g</span></span>
+              <span style={{color:'orangered'}}>Carb: <span style={{color:'white'}}>{calories<10?0:Math.round(((calories-500)-((weight*1.2)*4)-(((calories-500)*0.25)/9)*9)/4)} g</span></span>
+              
             </div>
             <div>
-              <span style={{color:'orangered'}}>Fat:<span style={{color:'white'}}>{Math.round(((calories<10?0:(calories-300))*0.25)/9)}g</span></span>
-              <span style={{color:'orangered'}}>Fat:<span style={{color:'white'}}>{Math.round(((calories<10?0:(calories-500))*0.25)/9)}g</span></span>
-              <span style={{color:'orangered'}}>Fat:<span style={{color:'white'}}>{Math.round(((calories<10?0:(calories-800))*0.25)/9)}g</span></span>
-            </div>
-            <div>
-              <span style={{color:'orangered'}}>Carb:<span style={{color:'white'}}>{calories<10?0:Math.round(((calories-300)-((weight*1.2)*4)-(((calories-300)*0.25)/9)*9)/4)}g</span></span>
-              <span style={{color:'orangered'}}>Carb:<span style={{color:'white'}}>{calories<10?0:Math.round(((calories-500)-((weight*1.2)*4)-(((calories-500)*0.25)/9)*9)/4)}g</span></span>
-              <span style={{color:'orangered'}}>Carb:<span style={{color:'white'}}>{calories<10?0:Math.round(((calories-800)-((weight*1.2)*4)-(((calories-800)*0.25)/9)*9)/4)}g</span></span>
+              <span style={{color:'red'}}>Aggressive: <span style={{color:'white'}}>{calories<10?0:Math.round(calories-800)} Kcal/Day</span></span>
+              <span style={{color:'orangered'}}>Protine: <span style={{color:'white'}}>{calories<10?0:Math.round(((calories-800)*0.25)/4)} g</span></span>
+              <span style={{color:'orangered'}}>Fat: <span style={{color:'white'}}>{Math.round(((calories<10?0:(calories-800))*0.25)/9)} g</span></span>
+              <span style={{color:'orangered'}}>Carb: <span style={{color:'white'}}>{calories<10?0:Math.round(((calories-800)-((weight*1.2)*4)-(((calories-800)*0.25)/9)*9)/4)} g</span></span>
             </div>
              </div>
           </div>
@@ -102,28 +102,26 @@ gender==="male"?((10*(weightUnit==="lbs"?weight/2.20462:weight))+(6.25*(heightUn
               <h3>To Gain Weight</h3>
            <div className="card-infos">
             <div>
-              <span style={{color:'green'}}>Lean:<span style={{color:'white'}}>{calories<10?0:Math.round(calories+300)}Kcal</span></span>
-              <span style={{color:'skyblue'}}>Modarate:<span style={{color:'white'}}>{calories<10?0:Math.round(calories+500)}Kcal</span></span>
-              <span style={{color:'red'}}>Aggressive:<span style={{color:'white'}}>{calories<10?0:Math.round(calories+800)}Kcal</span></span>
+              <span style={{color:'lightgreen'}}>Lean: <span style={{color:'white'}}>{calories<10?0:Math.round(calories+300)} Kcal/Day</span></span>
+              <span style={{color:'orangered'}}>Protine: <span style={{color:'white'}}>{calories<10?0:Math.round(((calories+300)*0.25)/4)} g</span></span>
+              <span style={{color:'orangered'}}>Fat: <span style={{color:'white'}}>{Math.round(((calories<10?0:(calories+300))*0.25)/9)} g</span></span>
+              <span style={{color:'orangered'}}>Carb: <span style={{color:'white'}}>{calories<10?0:Math.round(((calories+300)-((weight*1.2)*4)-(((calories+300)*0.25)/9)*9)/4)} g</span></span>
+              
             </div>
             <div>
-              <span style={{color:'orangered'}}>Protine:<span style={{color:'white'}}>{calories<10?0:Math.round(((calories+300)*0.25)/4)}g</span></span>
-              <span style={{color:'orangered'}}>Protine:<span style={{color:'white'}}>{calories<10?0:Math.round(((calories+500)*0.25)/4)}g</span></span>
-              <span style={{color:'orangered'}}>Protine:<span style={{color:'white'}}>{calories<10?0:Math.round(((calories+800)*0.25)/4)}g</span></span>
+              <span style={{color:'skyblue'}}>Modarate: <span style={{color:'white'}}>{calories<10?0:Math.round(calories+500)} Kcal/Day</span></span>
+              <span style={{color:'orangered'}}>Protine: <span style={{color:'white'}}>{calories<10?0:Math.round(((calories+500)*0.25)/4)} g</span></span>
+              <span style={{color:'orangered'}}>Fat: <span style={{color:'white'}}>{Math.round(((calories<10?0:(calories+500))*0.25)/9)} g</span></span>
+              <span style={{color:'orangered'}}>Carb: <span style={{color:'white'}}>{calories<10?0:Math.round(((calories+500)-((weight*1.2)*4)-(((calories+500)*0.25)/9)*9)/4)} g</span></span>
             </div>
             <div>
-              <span style={{color:'orangered'}}>Fat:<span style={{color:'white'}}>{Math.round(((calories<10?0:(calories+300))*0.25)/9)}g</span></span>
-              <span style={{color:'orangered'}}>Fat:<span style={{color:'white'}}>{Math.round(((calories<10?0:(calories+500))*0.25)/9)}g</span></span>
-              <span style={{color:'orangered'}}>Fat:<span style={{color:'white'}}>{Math.round(((calories<10?0:(calories+800))*0.25)/9)}g</span></span>
-            </div>
-            <div>
-              <span style={{color:'orangered'}}>Carb:<span style={{color:'white'}}>{calories<10?0:Math.round(((calories+300)-((weight*1.2)*4)-(((calories+300)*0.25)/9)*9)/4)}g</span></span>
-              <span style={{color:'orangered'}}>Carb:<span style={{color:'white'}}>{calories<10?0:Math.round(((calories+500)-((weight*1.2)*4)-(((calories+500)*0.25)/9)*9)/4)}g</span></span>
-              <span style={{color:'orangered'}}>Carb:<span style={{color:'white'}}>{calories<10?0:Math.round(((calories+800)-((weight*1.2)*4)-(((calories+800)*0.25)/9)*9)/4)}g</span></span>
+              <span style={{color:'red'}}>Aggressive: <span style={{color:'white'}}>{calories<10?0:Math.round(calories+800)} Kcal/Day</span></span>
+              <span style={{color:'orangered'}}>Protine: <span style={{color:'white'}}>{calories<10?0:Math.round(((calories+800)*0.25)/4)} g</span></span>
+              <span style={{color:'orangered'}}>Fat: <span style={{color:'white'}}>{Math.round(((calories<10?0:(calories+800))*0.25)/9)} g</span></span>
+              <span style={{color:'orangered'}}>Carb: <span style={{color:'white'}}>{calories<10?0:Math.round(((calories+800)-((weight*1.2)*4)-(((calories+800)*0.25)/9)*9)/4)} g</span></span>
             </div>
              </div>
           </div>
-        </div>
         </div>
         </div>
         <hr/>

@@ -66,26 +66,26 @@ function handleClick(id){
         </div>
         <div id="contact-form">
         <form >
-          <h4>Claim Your 7 Day<br/> Free Trial.......</h4>
-          <div className="input-label-container">
+          <h4 className='form-scroll' >Claim Your 7 Day<br/> Free Trial.......</h4>
+          <div className='form-scroll' >
            <input type='text'/>
            <label for="">Name</label>
            </div>
-           <div className="input-label-container">
+           <div className='form-scroll' > 
            <input type='email'/>
            <label for="email">Email</label>
            </div>
-           <div className="input-label-container">
+           <div className='form-scroll' >
            <input type='number' />
            <label for="number">Ph.Number</label>
            </div>
-           <select >
+           <select className='form-scroll' >
                <option>Membership interest.....</option>
                <option>1 Month</option>
                <option>6 Month</option>
                <option>12 Month</option>
            </select>
-           <button>Claim Trial</button>
+           <button className='form-scroll'>Claim Trial</button>
         </form>
         </div>
     </div>

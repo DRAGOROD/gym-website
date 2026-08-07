@@ -61,7 +61,7 @@ let tabs=[
         <ul id="nav-links">
           {tabs.map((tab,i)=>(<li className={activeId===tab.id?'active-tab':""} key={i} onClick={()=>changeTab(tab.id)}>{tab.label}</li>))}
         </ul>
-        <span id="calculator-btn" hidden={activeId!=="t1"} onClick={()=>calRef.current.scrollIntoView({behavior:"smooth"})}>Calculator</span>
+       {/*<span id="calculator-btn" hidden={activeId!=="t1"} onClick={()=>calRef.current.scrollIntoView({behavior:"smooth"})}>Calculator</span>*/}
         <div id="login-btn">Join Us</div>
     </div>
     {activeTab && 

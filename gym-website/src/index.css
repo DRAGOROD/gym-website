@@ -3,6 +3,7 @@ margin: 0;
 padding: 0;
 box-sizing: border-box;
 background-color: #080808;
+scroll-behavior: smooth;
 }
 
 
@@ -43,10 +44,9 @@ background-color: #080808;
 #nav-container{
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     text-decoration: none;
-    
     color: white;
     box-shadow: 2px 2px 10px 2px #7e7c7c , -5px -5px 10px -5px #7e7c7c;
 }
@@ -86,9 +86,6 @@ background: transparent;
 
 .active-tab{
    color:aqua;
-   width:5.5rem;
-   padding:0.5rem;
-   border-radius: 1rem;
    background-image: linear-gradient(180deg,#6d065a,#ff00ff,#ff00ff,#6d065a);
    box-shadow: 1px 1px 2px 2px rgb(39, 39, 39);
 }
@@ -104,6 +101,7 @@ background: transparent;
 }
 
 #login-btn{
+   text-align: center;
    margin-top:3rem;
    margin-bottom:3rem;
    margin-right: 4rem; 
@@ -285,30 +283,13 @@ opacity: 0;
     background:transparent;
     backdrop-filter: blur(8px);
     margin: auto;
-    height:27rem;
     border-radius: 1rem;
     border:3px solid white;
-    margin-top: 3rem;
-    margin-bottom: 25rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     padding:1rem;
     animation:border-colors infinite 10s;
-    /*box-shadow: 1.5px 1.5px 15px 4px white, -1.5px -1.5px 15px 4px;*/
-    /*position:relative;
-   z-index:0;*/
 }
-
-/*#calculator-box::after{
-    content:"";
-    position:absolute;
-    height:100%;
-    width: 100%;
-    background-color: red;
-    top:50%;
-    left:50%;
-    translate: -50% -50%;
-   z-index: -1;
-  
-}*/
 
 #calculator-box h1{
     color:white;
@@ -323,7 +304,7 @@ opacity: 0;
     flex-direction: column;
     align-items: center;
     gap:1rem;
-    width: 20%;
+    width: 100%;
     margin: auto;
     background-color: transparent;
 }
@@ -399,10 +380,19 @@ z-index:-1;
 
 #display-bmi{
     margin-top: 3rem;
+    margin-bottom: 2rem;
     color:white;
     font-size:xx-large;
     background: transparent;
     text-align: center;
+}
+
+#display-bmi div{
+    font-weight: bolder;
+}
+
+#display-bmi span{
+    font-weight: lighter;
 }
 
 .show-box{
@@ -423,6 +413,7 @@ background-color: #0808088c;
     justify-content: center;
     gap:3rem;
    background: transparent;
+   
 }
 
 .card-infos{
@@ -498,7 +489,7 @@ background: transparent;
 }
 
 #lower-text{
-     margin-top: -5rem;
+    margin-top: -5rem;
     background: transparent;
 }
 
@@ -557,6 +548,7 @@ box-shadow: 1px 1px 3px 4px rgb(165, 164, 164);
 }
 
 .card img{
+    margin-top:0.3rem;
     background-image:linear-gradient(to right, rgb(145, 124, 5), rgb(226, 226, 87),rgb(197, 168, 3));
     border-radius: 50%;
     border:0.3rem solid white;
@@ -575,7 +567,10 @@ box-shadow: 1px 1px 3px 4px rgb(165, 164, 164);
 }
 
 .card p{
-    color:rgb(206, 205, 205);
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
+    line-height: 0.8rem;
+    color:rgb(201, 198, 198);
     font-weight: 800;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
@@ -832,8 +827,7 @@ align-items:center;
 justify-content:center;
 gap:5rem;
 height:3rem;
-width:90%;
-margin-left:2rem;
+width:100%;
 background: transparent;
 }
 
@@ -894,7 +888,6 @@ background: transparent;
     background:transparent;
     backdrop-filter: blur(8px);
     /*effect*/
-
     transform: translateY(0);
     transition: all 2s ease;
     @starting-style{
@@ -932,6 +925,7 @@ background: transparent;
     height:100%;
 }
 
+
 #contact-form form div input:focus{
     outline: none;
     box-shadow: none;
@@ -952,8 +946,6 @@ background: transparent;
     color:rgb(192, 190, 190);
     font-size: larger;
 }
-
-
 
 #contact-form select{
     margin-top: 1rem;
@@ -1043,6 +1035,11 @@ background: transparent;
     to{
         scale:100%;
     }
+}
+
+/*turn off Scrolling Effect for PC Screens*/
+.form-scroll{
+    animation: none;
 }
 
 
@@ -1360,3 +1357,334 @@ animation:right-flexer 7s infinite linear;
 
 
 
+@media(max-width:790px){
+    *{
+        width:100%;
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+        position:relative;
+        scroll-behavior: smooth;
+    }
+
+    #calculator-btn{
+        display:"hidden";
+    }
+                                        /*Calculator Section*/
+
+
+    /*Calculator Form*/                                    
+    #calculator-box{
+        width:80%;
+    }
+
+    #calculator-box div input{
+        width: 400%;
+    }
+    
+    /*Calculator Display*/
+    #display-bmi{
+        width:100%;
+    }
+
+    #diet-cards{
+        margin-top: 1rem;
+        width:85%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .card-infos div{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #left-card{
+        margin-top: 2rem;
+    }
+
+    /*Calculator Animation*/
+    .calculator-animation{
+        animation:none;
+        opacity:1;
+        transform: translateY(0);
+        transition:all 2s ease;
+        @starting-style{
+            opacity: 0;
+            transform:translateY(100%);
+        }
+    }
+                                        
+
+                                        /*Footer Section*/
+                                         
+
+    #footer-container{
+        width:100%;
+        padding:0.5rem;
+    }
+
+    #footer-container div{
+        font-size: x-small;
+        width:25%;
+    }
+
+    #footer-container div p a{
+        font-size: 0.5rem;
+    }
+     
+    #copyright{
+        margin-bottom: 4rem;
+    }
+     
+                                 /*Nav Section*/
+
+
+     #nav-container{
+        width:100%;
+     }     
+     
+     #nav-links{
+        font-size: smaller;
+        gap:0.2rem;
+        position:fixed;
+        height:4rem;
+        top:91%;
+        width:95%;
+        z-index: 99;
+        border: 1px rgba(255, 255, 255, 0.253) solid;
+        background-color: transparent;
+        backdrop-filter: blur(150px);
+     }
+
+    #nav-links li{
+        background-color: rgba(12, 12, 12, 0.438);
+        padding:0;
+        height:2rem;
+        width:20%;
+        font-size: smaller;
+     }
+
+     #nav-links li:hover{
+    width:20%;
+    height:2rem;
+     }
+     
+     .active-tab{
+
+     }
+
+     #logo{
+        margin:0;
+        padding:0;
+        width:20%;
+
+     }
+
+     #login-btn{
+        margin:0;
+        padding:0;
+        width:4.8rem;
+        padding:0.7rem;
+     }
+
+
+                               /*Exercise Section*/
+
+
+
+      #exercise-heading{
+        font-size: x-large;
+        width:35%;
+      }   
+
+      #exercise-head img{
+        width:12%;
+        height:12%;
+      }
+      .workout-cards h3{
+        font-size: smaller;
+      }
+
+      #workouts-container{
+        opacity:1;
+        transform: translateY(0);
+        transition:all 2s ease;
+        @starting-style{
+            opacity: 0;
+            transform:translateY(100%);
+        }
+      }
+
+
+                                    /*Review Section*/
+ 
+
+        #review-head{
+            text-align: center;
+           margin-bottom: 2rem;
+        }
+
+        #review-head span{
+            font-size:large;
+            justify-content: center;
+        }
+
+        #review-head img{
+            width:38%;
+        }
+
+        #upper-text{
+            margin:0;
+            margin-bottom: -2.5rem;
+        }
+
+        #lower-text{
+            margin:0;
+            margin-top: -2.5rem;
+        }
+  
+        .card{
+            width:43%;
+        }
+
+        .card img{
+            width:50%;
+        }
+
+        .card h5{
+            font-size: medium;
+        }
+
+        .card p{
+            font-size: x-small;
+        }
+
+                                
+                                  /*Plan Section*/
+
+
+        #plan-head{
+            width:95%;
+        }
+
+        #plan-head h3{
+           width:48%;
+           margin-bottom: 1rem;
+        }          
+        
+        #plan-head p{
+            font-size: larger;
+        }
+
+        .plan-card{
+            text-align: center;
+            width:75%;
+            margin-bottom: 2rem;
+        }
+
+        #trial-btn{
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+
+
+                                  /*Contact Section*/
+
+
+
+        #contact-heading{
+            width:32%;
+        }
+
+        #contact-container{
+            flex-direction: column;
+        }
+
+        #faq-section{
+            width:100%;
+        }
+
+        #faq-section div:not(.sm-icons){
+               width:95%;
+               margin-left:0.5rem;
+        }
+
+        #faq-section div button{
+            width:100%;
+        font-size: smaller;
+        }
+
+        #faq-section div button span{
+            width:5%;
+            height:5%;
+        }
+
+        #faq-section div p{
+            width:95%;
+            margin-left: 0.5rem;
+            text-align: center;
+            font-size: small;
+        }
+
+        .sih-animation{
+            animation: none;
+            transform:translateX(0);
+            transition:all 5s ease;
+            @starting-style{
+                transform: translateX(-100%);
+            }
+        }
+
+        .si-animation{
+            animation: none;
+            scale: 1;
+            transition:all 1s ease;
+            @starting-style{
+                scale:0;
+            }
+        }
+
+        .sm-icons span{
+            width:3.5rem;
+            height:3.5rem;
+        }
+
+        #contact-form{
+            width:100%;
+        }
+
+        #contact-form form div label{
+            width:35%;
+        }
+
+        #contact-form button{
+            width:40%;
+        }
+
+        /*Form Scrolling Animation*/
+        #contact-form ,#contact-form form, #contact-form form div, #contact-form form select, #contact-form button{
+        transition:none;
+
+        }
+
+        .form-scroll{
+            animation:contact-scroll linear;
+           animation-timeline: view();
+           animation-range: entry 0 cover 20%;
+           
+        }
+
+        @keyframes contact-scroll {
+            from{
+                scale:0.3;
+            }
+            to{
+                scale:1;
+            }
+            
+        }
+
+}
