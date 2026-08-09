@@ -1,5 +1,5 @@
 
-import react, { createContext, useRef, useState } from 'react';
+import react, { createContext, useEffect, useRef, useState } from 'react';
 import GymRatLogo from './assets/gymratlogo.webp';
 import Home from './home.jsx';
 import Reviews from './reviews.jsx';
@@ -35,11 +35,21 @@ let tabs=[
       content:Contact
     }
   ]
-
+ 
   let [activeId,setActiveId]=useState(tabs[0].id);
   let [visible,setVisible]=useState(true);
   let calRef=useRef(null);
+  let [screenWidth,setScreenWidth]=useState(window.innerWidth);
 
+  useEffect(()=>{
+    function handleResize(){
+      setScreenWidth(window.innerWidth)
+    }
+    handleResize()
+    window.addEventListener("resize",handleResize);
+    return ()=>window.removeEventListener("resize",handleResize);
+  },[])
+  
 
   let activeTab=tabs.find(tab=>tab.id===activeId);
 
@@ -61,7 +71,7 @@ let tabs=[
         <ul id="nav-links">
           {tabs.map((tab,i)=>(<li className={activeId===tab.id?'active-tab':""} key={i} onClick={()=>changeTab(tab.id)}>{tab.label}</li>))}
         </ul>
-       {/*<span id="calculator-btn" hidden={activeId!=="t1"} onClick={()=>calRef.current.scrollIntoView({behavior:"smooth"})}>Calculator</span>*/}
+<span id="calculator-btn" hidden={activeId!=="t1"} onClick={()=>calRef.current.scrollIntoView({behavior:"smooth"})}>Calculator</span>
         <div id="login-btn">Join Us</div>
     </div>
     {activeTab && 

@@ -197,6 +197,14 @@ transform: translateY(-100%);
 }
 
 
+#calculator-btn{
+    width:4rem;
+    height:4rem;
+    background-color: red;
+    position: absolute;
+}
+
+
                               /*Navbar Ending*/
 
 
@@ -569,7 +577,7 @@ box-shadow: 1px 1px 3px 4px rgb(165, 164, 164);
 .card p{
     margin-top: 0.3rem;
     margin-bottom: 0.3rem;
-    line-height: 0.8rem;
+    line-height: 1.5rem;
     color:rgb(201, 198, 198);
     font-weight: 800;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -1451,8 +1459,8 @@ animation:right-flexer 7s infinite linear;
         gap:0.2rem;
         position:fixed;
         height:4rem;
-        top:91%;
-        width:95%;
+        bottom:0.5%;
+        width:97%;
         z-index: 99;
         border: 1px rgba(255, 255, 255, 0.253) solid;
         background-color: transparent;
@@ -1462,6 +1470,7 @@ animation:right-flexer 7s infinite linear;
     #nav-links li{
         background-color: rgba(12, 12, 12, 0.438);
         padding:0;
+        aspect-ratio: 1;
         height:2rem;
         width:20%;
         font-size: smaller;
@@ -1486,10 +1495,13 @@ animation:right-flexer 7s infinite linear;
      #login-btn{
         margin:0;
         padding:0;
-        width:4.8rem;
+        width:25%;
         padding:0.7rem;
      }
-
+      
+     #calculator-btn{
+        display: none;
+     }
 
                                /*Exercise Section*/
 
@@ -1560,6 +1572,7 @@ animation:right-flexer 7s infinite linear;
 
         .card p{
             font-size: x-small;
+            line-height: 0.8rem;
         }
 
                                 
