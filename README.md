@@ -2,7 +2,7 @@ GymRat is a modern fitness and gym management web application built with React t
 
 ⭐Project Link:- https://dragorod.github.io/gym-website/
 
-![image alt](https://github.com/DRAGOROD/gym-website/blob/7fd3020fa099874082e3db5b3be3a436608cd182/Project-gif.gif)
+![image alt](https://github.com/DRAGOROD/gym-website/blob/09bf0fa084260adf16b0039c9532bc2355040025/Project-gif.gif)
 
 ## 🛠️ Tools & Technologies Used
 - React
