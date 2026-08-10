@@ -39,7 +39,7 @@ GymRat is a modern fitness and gym management web application built with React t
 - Creating the BMI and calorie calculation logic along with different weight-loss and weight-gain calorie levels.
 
 
-##✅ Solutions Implemented
+## ✅ Solutions Implemented
 - Structured workout information into reusable JavaScript objects containing muscle groups, icons, exercise names, and exercise images.
 - Used conditional rendering to display the currently selected muscle group's exercises.
 - Used the Mifflin-St Jeor equation approach for calculating estimated daily calorie requirements.
